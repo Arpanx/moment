@@ -69,7 +69,7 @@ export function getParseRegexForToken(token, config) {
 function unescapeFormat(s) {
     return regexEscape(
         s
-            .replace('\\', '')
+            //.replace('\\', '') //777
             .replace(
                 /\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g,
                 function (matched, p1, p2, p3, p4) {
