@@ -70,6 +70,7 @@ function unescapeFormat(s) {
     return regexEscape(
         s
             //.replace('\\', '') //777
+            .replace(/\\/g, '')  // remove Incomplete string escaping or encoding (js/incomplete-sanitization)
             .replace(
                 /\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g,
                 function (matched, p1, p2, p3, p4) {

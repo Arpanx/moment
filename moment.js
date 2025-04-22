@@ -784,6 +784,7 @@
         return regexEscape(
             s
                 //.replace('\\', '') // 777
+                .replace(/\\/g, '')
                 .replace(
                     /\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g,
                     function (matched, p1, p2, p3, p4) {
